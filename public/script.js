@@ -1,7 +1,5 @@
 
 
-let dataset = []
-
 function go(){
  let width = 1200,
    height = 600;
