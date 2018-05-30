@@ -1,4 +1,7 @@
-//Make connection
+//Connect to Firebase
+const ref = firebase.database().ref('Database')
+
+//Make websocket connection
 var socket = io.connect('http://localhost:4000');
 
 // Query DOM
@@ -27,8 +30,8 @@ socket.on('response', function(data){
         }
     }
     if(newItem){
-        dataset.push({response: data.response.toLowerCase(), count: 1})
+        // dataset.push({response: data.response.toLowerCase(), count: 1})
+        ref.push({response: data.response.toLowerCase(), count: 1})
+        console.log(ref)
     }
-    // console.log(data.response.toLowerCase())
-    console.log(dataset)
 });
