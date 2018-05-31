@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>D3 Stuff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="" />
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/index.css" />
 </head>
+
 <body>
-    <div style="display:flex; align-items: center;" id="inputBox">
+
+    <button style="visibility: hidden" id="vote">Vote</button>
+    <div id="startGameContainer">
+        <div class="divBlock">
+            <h1>You'll have 10 seconds to fill in the blank. 
+                <br><br> Ready?<br><br>
+                <button id="startGame" onclick="countdown(), slideOut(), generateQuestion()">GO!</button>
+            </h1>
+        </div>
+    </div>
+    <div id="questionContainer">
+        <div id="questionSubContainer">
+            <div id="question"></div>
+            <br>
+            <div id="countdown">10</div>
+        </div>
+    </div>
+    <div style="visibility: hidden;" id="inputBox">
         <input id="response" type="text" placeholder="Answer" />
         <button id="send">Send</button>
     </div>
+    <form id="listContainer" style="visibility: hidden">
+            <select id="list"></select>
+            <input type="submit" value="Submit">
+    </form>
     <div id="chart"></div>
-    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-    <script>
-     // Initialize Firebase
-        var config = {
-        apiKey: "AIzaSyBj_t2Gy1KVVL6k4-rDXD_UmXd9ou-kRW8",
-        authDomain: "adsfsdsf-85d17.firebaseapp.com",
-        databaseURL: "https://adsfsdsf-85d17.firebaseio.com",
-        projectId: "adsfsdsf-85d17",
-        storageBucket: "",
-        messagingSenderId: "943703389163"
-        };
-        firebase.initializeApp(config);
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
     <script src="d3/d3.min.js"></script>
+    <script src="bounce.min.js"></script>
+    <script src="effects.js"></script>
     <script src="response.js"></script>
     <script src="script.js"></script>
+    <script src="timer.js"></script>
+
 </body>
+
 </html>

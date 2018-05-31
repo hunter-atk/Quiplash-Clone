@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>D3 Stuff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/user.css" />
+</head>
+
+<body>
+   <container>
+    <button style="visibility: hidden" id="vote">Vote</button>
+    <div id="inputBox">
+        <input id="response" type="text" placeholder="Answer" />
+        <button id="send">Send</button>
+    </div>
+    <div id="answerSubmitted" style="visibility: hidden"><h1>Response submitted</h1></div>
+    <form id="listContainer" style="visibility: hidden">
+            <select id="list"></select>
+            <input type="submit" value="Submit">
+    </form>
+  </container>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+    <script src="d3/d3.min.js"></script>
+    <script src="bounce.min.js"></script>
+    <script src="userEffects.js"></script>
+    <script src="response.js"></script>
+    <script src="script.js"></script>
+    <script src="timer.js"></script>
+
+    <script>
+        $('#send').click(function (){
+            $("#inputBox").remove();
+            $("#answerSubmitted").attr("style","visibility: visible");
+            setTimeout(function(){return $("#vote").attr("style","visibility: visible")}, 10000);
+        })
+
+        $('#vote').click(function (){
+            $("#answerSubmitted").remove();
+            $("#vote").remove();
+            function generateResponseList(){
+                dataset.forEach(x => {
+                    console.log(x.response);
+                    $("#list").append("<option value='" + x.response + "' class='listItem'>" + x.response + "</option>");
+                })};
+            $( "#list" ).empty();
+            generateResponseList();
+            $("#listContainer").attr("style","visibility: visible");
+        })
+
+        $('.listItem').click(function (){
+
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy');
+
+body {
+    background-color: #153b77;
+}
+
+#startGameContainer {
+    width: 700px;
+    height: 350px;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 60px 5px #00000073;
+    margin: auto;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+}
+
+.divBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 3px;
+    color: red;
+}
+
+#startGame{
+    background-color: white; 
+    border: none;
+    color: rgb(4, 230, 72);
+    /* padding: 15px 32px; */
+    font-size: 2em !important;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#startGame:hover {
+    color: rgb(255, 0, 157);
+    background-color: white;
+}
+
+#questionContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+#questionSubContainer {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#countdown, #question{
+    text-align: center;
+    font-family: "Bangers";
+}
+
+#countdown {
+    color: red;
+    font-size: 12em;
+}
+
+#question {
+    color: white;
+    font-size: 7em;
+}
+
+text {
+    font-family: "Bangers";
+    color: red;
+}
+

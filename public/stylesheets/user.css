@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Luckiest+Guy');
+
+body {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #153b77;
+}
+
+#inputBox {
+    margin: auto;
+    padding: 5px;
+}
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    font-family: "Bangers";
+}
+
+input[type=submit], #send {
+    width: 100%;
+    background-color: rgb(255, 0, 157);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-family: "Bangers";
+}
+
+input[type=submit]:hover, #send:hover {
+    background-color: rgb(255, 199, 44);
+    font-size: 1.5em;
+}
+
+div {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
+    padding: 20px;
+    box-shadow: 5px 5px 60px 5px #00000073; 
+}
