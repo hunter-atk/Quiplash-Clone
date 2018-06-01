@@ -24,4 +24,9 @@ io.on('connection', (socket) => {
         io.sockets.emit('response', data);
     });
 
+    socket.on('vote', function(data){
+        // console.log(data);
+        io.sockets.emit('vote', data);
+    });
+
 });
