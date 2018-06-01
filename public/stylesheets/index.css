@@ -93,7 +93,7 @@ text {
 }
 
 #votingResults {
-    width: 100%;
+    width: 100px;
     color: rgb(255, 0, 157);
     padding: 14px 14px;
     margin: 8px 0;

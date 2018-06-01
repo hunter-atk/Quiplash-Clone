@@ -13,6 +13,7 @@ let temp;
       go()
         return;
       }
+      $("#votingResults").attr("style","visibility: visible");
  
     seconds--;
     temp = document.getElementById('countdown');

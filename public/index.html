@@ -37,8 +37,8 @@
             <!-- <input id="voteBtn" type="submit" value="Submit"> -->
     </form>
     <button style="visibility: hidden" id="voteYo">Vote</button>
-    <button style="visibility: visible" id="votingResults" onclick="sendVotingResults()">Voteing Results</button>
     <div id="chart"></div>
+    <button style="visibility: hidden" id="votingResults" onclick="sendVotingResults()">Voting Results</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
@@ -53,8 +53,11 @@
             let bestAnswer = "";
             let highestCount = 0;
             votes.forEach(x => {
-                console.log(x);
+                if (x.count >= highestCount){
+                    bestAnswer = x.vote;
+                }
             })
+            console.log(bestAnswer);
         }
     </script>
 
