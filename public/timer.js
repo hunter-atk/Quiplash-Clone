@@ -9,12 +9,7 @@ let temp;
     //   temp = document.getElementById('countdown');
     //   temp.innerHTML = "all done, bye bye";
       $("#countdown").attr("style","visibility: hidden");
-      var zoomOut = new Bounce();
-      zoomOut.scale({
-        from: { x: 1, y: 1 },
-        to: { x: 0.3, y: 0.3 }
-      });
-      bounce.applyTo($("#question"));
+      $("#question").attr("style", "margin-bottom: 150px");
       go()
         return;
       }
