@@ -9,7 +9,7 @@ let temp;
     //   temp = document.getElementById('countdown');
     //   temp.innerHTML = "all done, bye bye";
       $("#countdown").attr("style","visibility: hidden");
-      $("#question").attr("style", "margin-bottom: 150px");
+      $("#question").attr("style", "margin-bottom: 150px; z-index: -1");
       go()
         return;
       }
