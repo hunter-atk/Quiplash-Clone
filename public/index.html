@@ -37,6 +37,7 @@
             <!-- <input id="voteBtn" type="submit" value="Submit"> -->
     </form>
     <button style="visibility: hidden" id="voteYo">Vote</button>
+    <button style="visibility: visible" id="votingResults" onclick="sendVotingResults()">Voteing Results</button>
     <div id="chart"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
@@ -47,6 +48,15 @@
     <script src="response.js"></script>
     <script src="script.js"></script>
     <script src="timer.js"></script>
+    <script>
+        function sendVotingResults(){
+            let bestAnswer = "";
+            let highestCount = 0;
+            votes.forEach(x => {
+                console.log(x);
+            })
+        }
+    </script>
 
 </body>
 
