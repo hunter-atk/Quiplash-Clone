@@ -15,11 +15,11 @@
         <input id="response" type="text" placeholder="Answer" />
         <button id="send">Send</button>
     </div>
-    <div id="answerSubmitted" style="visibility: hidden"><h1>Response submitted</h1></div>
+    <div id="answerSubmitted" style="visibility: hidden">Response submitted</div>
     <button style="visibility: hidden" id="voteYo">Vote</button>
     <form id="listContainer" style="visibility: hidden">
-            <input id="vote" type="text" placeholder="Vote" />
-            <!-- <select id="vote"></select> -->
+            <!-- <input id="vote" type="text" placeholder="Your vote" /> -->
+            <select id="vote"></select>
             <input type='submit' id="voteBtn" value='Vote'>
             <!-- <input id="voteBtn" type="submit" value="Submit"> -->
     </form>
@@ -46,8 +46,7 @@
             $("#voteYo").remove();
             function generateResponseList(){
                 dataset.forEach(x => {
-                    console.log(x.response);
-                    $("#list").append("<option value='" + x.response + "' class='listItem'>" + x.response + "</option>");
+                    $("#vote").append("<option value='" + x.response + "' class='listItem'>" + x.response + "</option>");
                 })};
             $( "#list" ).empty();
             generateResponseList();
@@ -58,21 +57,11 @@
 
         })
     </script>
-    <script>
-        $("#listContainer").submit(function(e){
-            return false;
-        });
-
-        $(function(){
-            let socket = io.connect();
-            let $voteForm = $('#listContainer')
-            let $vote = $('#vote')
-
-            socket.emit('vote', $vote.val());
-            $vote.val(' ')
-
-        })
-    </script>
+    <!-- <script>
+            $("#listContainer").submit(function(e){
+                return false;
+            });
+    </script> -->
 
 </body>
 

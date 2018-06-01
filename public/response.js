@@ -19,14 +19,11 @@ btn.addEventListener('click', function(){
 });
 
 voteBtn.addEventListener('click', function(){
-    console.log('this thing was clicked');
-    console.log(vote.value)
     socket.emit('vote', {
          vote: vote.value
     });
     console.log(vote.value)
     vote.value = "";
-    console.log('now fuck off')
 });
 
 // Listen for events
