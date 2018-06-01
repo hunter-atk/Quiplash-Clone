@@ -11,12 +11,12 @@
 
 <body>
    <container>
-    <button style="visibility: hidden" id="vote">Vote</button>
     <div id="inputBox">
         <input id="response" type="text" placeholder="Answer" />
         <button id="send">Send</button>
     </div>
     <div id="answerSubmitted" style="visibility: hidden"><h1>Response submitted</h1></div>
+    <button style="visibility: hidden" id="voteYo">Vote</button>
     <form id="listContainer" style="visibility: hidden">
             <input id="vote" type="text" placeholder="Vote" />
             <!-- <select id="vote"></select> -->
@@ -38,12 +38,12 @@
         $('#send').click(function (){
             $("#inputBox").remove();
             $("#answerSubmitted").attr("style","visibility: visible");
-            setTimeout(function(){return $("#vote").attr("style","visibility: visible")}, 10000);
+            setTimeout(function(){return $("#voteYo").attr("style","visibility: visible")}, 10000);
         })
 
-        $('#vote').click(function (){
+        $('#voteYo').click(function (){
             $("#answerSubmitted").remove();
-            $("#vote").remove();
+            $("#voteYo").remove();
             function generateResponseList(){
                 dataset.forEach(x => {
                     console.log(x.response);
