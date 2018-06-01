@@ -41,7 +41,6 @@ socket.on('response', function(data){
 });
 
 socket.on('vote', function(data){
-    console.log('a thing happened')
     let newVote = true;
     for(i=0; i<votes.length; i++){
         if(votes[i].vote == data.vote.toLowerCase()){
