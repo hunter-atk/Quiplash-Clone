@@ -78,7 +78,7 @@ function go(){
 }
 
 function generateQuestion(){
-    $('#question').text(questions[Math.floor(Math.random() * Math.floor(6))]);
+    $('#question').text(questions[Math.floor(Math.random() * Math.floor(4))]);
     questions.shift();
 }
 
