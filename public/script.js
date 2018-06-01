@@ -82,13 +82,6 @@ function generateQuestion(){
     questions.shift();
 }
 
-// function generateResponseList() {
-//     dataset.forEach(x => {
-//         console.log(x.response);
-//         $("#list").append("<p class='listItem'>" + x.response + "</p>");
-//     })
-// }
-
 
 
  

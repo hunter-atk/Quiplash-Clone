@@ -1,13 +1,14 @@
 let dataset = []
+let votes = []
 
 //Make websocket connection
 var socket = io.connect('http://localhost:4000');
 
 // Query DOM
 var response = document.getElementById('response'),
-      btn = document.getElementById('send'),
-      vote = document.getElementById('vote'),
-      results = document.getElementById('resultsButton');
+    btn = document.getElementById('send'),
+    vote = document.getElementById('vote'),
+    voteBtn = document.getElementById('voteBtn');
 
 // Emit events
 btn.addEventListener('click', function(){
@@ -17,11 +18,16 @@ btn.addEventListener('click', function(){
   response.value = "";
 });
 
-// vote.addEventListener('click', function(){
-//     socket.emit('vote', {
-//          hey: 'fuckOff'
-//     });
-// });
+voteBtn.addEventListener('click', function(){
+    console.log('this thing was clicked');
+    console.log(vote.value)
+    socket.emit('vote', {
+         vote: vote.value
+    });
+    console.log(vote.value)
+    vote.value = "";
+    console.log('now fuck off')
+});
 
 // Listen for events
 socket.on('response', function(data){
@@ -37,11 +43,16 @@ socket.on('response', function(data){
     }
 });
 
-// socket.on('vote', function(){
-//     function generateResponseList(){
-//         dataset.forEach(x => {
-//             console.log(x.response);
-//             $("#list").append("<p class='listItem'>" + x.response + "</p>");
-//         })};
-//     generateResponseList();
-// })
+socket.on('vote', function(data){
+    console.log('a thing happened')
+    let newVote = true;
+    for(i=0; i<votes.length; i++){
+        if(votes[i].vote == data.vote.toLowerCase()){
+            votes[i].count++;
+            newVote = false;
+        }
+    }
+    if(newVote){
+        votes.push({vote: data.vote.toLowerCase(), count: 1})
+    }
+});
