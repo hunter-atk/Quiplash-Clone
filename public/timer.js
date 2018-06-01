@@ -11,9 +11,10 @@ let temp;
       $("#countdown").attr("style","visibility: hidden");
       $("#question").attr("style", "transform: translateY(-200px); transition: all 1.5s ease");
       go()
+      $("#votingResults").attr("style","visibility: visible");
         return;
       }
-      $("#votingResults").attr("style","visibility: visible");
+
  
     seconds--;
     temp = document.getElementById('countdown');
