@@ -1,5 +1,5 @@
 let color = d3.scaleOrdinal(d3.schemeSet3);
-let questions = ["This is how the world ends. Not with a bang, but with a ____", "If Gandalf and Dumbledore fought to the death, ____ would win.", "I'm voting ____ off the island!", "____ ended my last relationship."]
+let questions = ["This is how the world ends. Not with a bang, but with ____", "If Gandalf and Dumbledore fought to the death, ____ would win.", "I'm voting ____ off the island!", "____ ended my last relationship."]
 
 function go(){
 
