@@ -2,7 +2,7 @@ let dataset = []
 let votes = []
 
 //Make websocket connection
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect('https://morning-chamber-28711.herokuapp.com/');
 
 // Query DOM
 var response = document.getElementById('response'),
