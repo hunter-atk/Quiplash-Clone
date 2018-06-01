@@ -8,10 +8,16 @@ let temp;
     if (seconds == 1) {
     //   temp = document.getElementById('countdown');
     //   temp.innerHTML = "all done, bye bye";
-      $("#questionContainer").attr("style","visibility: hidden");
+      $("#countdown").attr("style","visibility: hidden");
+      var zoomOut = new Bounce();
+      zoomOut.scale({
+        from: { x: 1, y: 1 },
+        to: { x: 0.3, y: 0.3 }
+      });
+      bounce.applyTo($("#question"));
       go()
-      return;
-    }
+        return;
+      }
  
     seconds--;
     temp = document.getElementById('countdown');
