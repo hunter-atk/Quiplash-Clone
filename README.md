@@ -5,6 +5,12 @@
 ### Description
 This is a multiplayer game where players each submit an anonymous response to a fun fill-in-the-blank question, view all responses, and vote for their favorite. A bit like Cards Against Humanity, except you can fill in the blank however you like, and EVERYBODY gets to help choose the best response.
 
+![image](https://github.com/hunter-atk/Quiplash-Clone/blob/master/Screenshots/Screen%20Shot%202018-06-06%20at%2010.03.56%20AM.png)
+
+![image](https://github.com/hunter-atk/Quiplash-Clone/blob/master/Screenshots/Screen%20Shot%202018-06-06%20at%2010.00.47%20AM.png)
+
+![image](https://github.com/hunter-atk/Quiplash-Clone/blob/master/Screenshots/Screen%20Shot%202018-06-06%20at%2010.03.36%20AM.png)
+
 ### Technologies Used
 - JavaScript, HTML5, CSS
 - websocket.io
