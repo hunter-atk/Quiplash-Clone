@@ -11,7 +11,7 @@ This is a multiplayer game where players each submit an anonymous response to a 
 - D3.js
 
 ### Challenges
-Building this game began as an excuse for me to learn D3.js and to become more familiar with using websockets. The game utilizes web sockets to communicate with multiple players, and a force-directed bubble chart (built using D3) displays all players' responses when a 10-second timer reaches 0.
+Building this game began as an excuse for me to learn D3.js and to become more familiar with using websockets. The game utilizes websockets to communicate with multiple players, and a force-directed bubble chart (built using D3) displays all players' responses when a 10-second timer reaches 0.
 
 When I started this project, I had already worked with websockets before, but I was brand new to D3, and I can see why people say it's difficult to understand. BUT, I love love LOVE the endless cool things you can do with it, and I learned quite a bit about how to use it while building this game. It's challenging, but it's fun, and I'll definitely be working with D3 more in future.
 
